@@ -1,0 +1,9 @@
+<menu name="root">
+  <menu name="  Shutdown" command="shutdown -h now" />
+  <menu name="  Reboot" command="reboot" />
+  <menu name="  Suspend" command="systemctl suspend" />
+  <menu name="  Hibernate" command="systemctl hibernate" />
+  <menu name="separator-line" />
+  <menu name="  Logout" command="loginctl terminate-user $USER" />
+  <menu name="  Lock" command="hyprlock" />
+</menu>

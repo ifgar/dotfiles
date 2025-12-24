@@ -1,0 +1,126 @@
+{
+  "layer": "top",
+  "output": "DP-1",
+  "position": "top",
+  "modules-left": ["network"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "hyprland/workspaces",
+    "custom/notification",
+  	"cpu",
+  	"custom/separator",
+  	"temperature",
+  	"custom/separator",
+  	"custom/aio_fan",
+  	"memory",
+  	"pulseaudio",
+  	"custom/waybox",
+  	"clock",
+  	"custom/power"
+  ],
+  
+  //Modules configuration
+  
+  "hyprland/workspaces": {
+  "all-outputs": true
+  },
+  
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 100
+  },
+   
+  "network": {
+    "interval": 1,
+    "format-wifi": "<span foreground='#f5e0dc'>  </span>{essid}",
+    "format-ethernet": "<span foreground='#f5e0dc'>  </span><span foreground='#f7768e'>{bandwidthUpBytes}</span>  <span foreground='#76f78e'>{bandwidthDownBytes}</span>",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span foreground='#f5e0dc'>  </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  
+  "cpu": {
+    "interval": 10,
+    "format": "<span foreground='#565f89'></span> {usage}%",
+  },
+  
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "critical-threshold": 85,
+    "format": "{temperatureC}°C",
+    "format-critical": " - {temperatureC}°C"
+  },
+
+  "custom/aio_fan": {
+    "format": "{}RPM",
+    "interval": 1,
+    "exec": "cat $(dirname $(grep -l nct6798 /sys/class/hwmon/hwmon*/name))/fan2_input",
+    "min-length": 7
+  },
+  
+  "memory": {
+    "interval": 10,
+    "format": "<span foreground='#565f89'></span> {used}/{total}GB ({percentage}%)",
+    "max-length": 100
+  },
+  
+  "pulseaudio": {
+      "format": "<span foreground='#565f89'>{icon}</span>{volume}%",
+      "format-muted": "     ",
+      "format-icons": {
+          "default": [" ", " ", " "]
+      },
+      "on-click": "pavucontrol",
+      "min-length": 6
+  },
+  
+    "clock": {
+    "format": "<span foreground='#565f89'> </span>{:%a %d/%m/%Y %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  
+    "custom/separator": {
+    "format": "/",
+    "interval": 1
+  },
+  
+  "custom/waybox": {
+    "exec": "/home/nax/.config/waybox/waybox-status.sh",
+    "return-type": "json",
+    "format": "<span foreground='#565f89'> {icon} </span>",
+    "format-icons": {
+      "true": "",
+      "false": ""
+    },
+    "on-click": "/home/nax/vscode/waybox/build/linux/x64/release/bundle/waybox --x 2290 --y 10",
+    "tooltip": false
+  },
+  
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='13pt' foreground='#565f89'> {icon} </span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+   
+  "custom/power": {
+    "format": "<span foreground='#1f2335'></span>",
+    "tooltip": false,
+    "on-click": "/home/nax/vscode/waybox/build/linux/x64/release/bundle/waybox --menu power.xml --x 2411 --y 10"
+  }
+  
+}
