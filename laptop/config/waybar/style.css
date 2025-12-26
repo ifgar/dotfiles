@@ -44,12 +44,12 @@ window#waybar {
 #workspaces {
 	background-color: #1f2335;
 	margin: 1px 0px;
-	margin-left: 6px;
+	margin-left: 4px;
 	border-radius: 32px 0px 0px 32px;
 }
 
 #workspaces button {
-    padding: 1px 7px;
+    padding: 1px 3px;
     margin-right: 3px;
     color: #c0caf5;
 }
