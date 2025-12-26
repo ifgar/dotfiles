@@ -1,0 +1,140 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'JetBrainsMono Nerd Font';
+    font-size: 14px;
+	min-height: 0;
+}
+
+/* PARTE IZQUIERDA */
+.modules-left {
+	margin: 4px 10px 0px 10px;
+
+}
+
+#network {
+	background: transparent;
+	color: #ffffff;
+}
+
+#custom-notification{
+	background: #1F2335;
+	border-radius: 32px 0px 0px 32px;
+	padding-right:6px;
+	padding-left: 8px;
+}
+
+#tray{
+	background: #1F2335;
+	border-radius: 0px 32px 32px 0px;
+	padding-right:8px;
+	padding-left: 6px;
+	margin-right: 10px;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+/* PARTE CENTRAL */
+
+
+/* PARTE DERECHA */
+#workspaces {
+	background-color: #1f2335;
+	margin: 1px 0px;
+	margin-left: 6px;
+	border-radius: 32px 0px 0px 32px;
+}
+
+#workspaces button {
+    padding: 1px 7px;
+    margin-right: 3px;
+    color: #c0caf5;
+}
+
+#workspaces button:hover {
+	background-color: #565f89;
+	color: #1f2335;
+	border-radius: 32px;
+}
+
+#workspaces button.focused {
+    color: #1f2335;
+    background-color: #7dcfff;
+    border-radius: 32px;
+}
+
+#workspaces button.active {
+    background-color: #7dcfff;
+    color: #1f2335;
+    border-radius: 32px;
+}
+
+
+#custom-power, #temperature {
+	background-color: #1f2335;
+	color: #c0caf5;
+	padding: 0px 0px;
+	margin: 1px 0px;
+}
+
+#cpu, #memory, #pulseaudio, #clock, #custom-calculator {
+	background-color: #1f2335;
+	color: #c0caf5;
+	padding: 0px 0px;
+	margin: 1px 0px;
+	margin-left: 10px;
+}
+
+#custom-separator {
+	background-color: #1f2335;
+	color: #c0caf5;
+}
+
+#custom-waybox {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#clock {
+	background-color: #292e42;
+    border-radius: 3px;
+    padding: 0px 5px;
+    margin-right: 5px;
+    }
+
+#custom-power {
+	font-size: 12px;
+	background-color: #c53b53;
+	margin-right: 3px;
+	padding-left: 6px;
+	padding-right: 9px;
+	border-radius: 32px;
+}
+
+menu {
+	border-radius: 5px;
+	background: rgba(31, 35, 53, 0.95);
+	color: #B5E8E0;
+}
+
+menuitem {
+	border-radius: 5px;
+}
+
+delimiter1 {
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
+.modules-right {
+	background-color: #1f2335;
+	margin: 4px 10px 0px 10px;
+	padding: 2px 0px;
+	border-radius: 32px;
+
+}
+
+

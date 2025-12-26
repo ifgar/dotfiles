@@ -1,0 +1,7 @@
+<menu name="root">
+  <menu name="  Calculator" command="gnome-calculator" />
+  <menu name="  Subfix" command="/home/nax/vscode/subfix/build/linux/x64/release/bundle/subfix" />
+  <menu name="  Files" command="thunar" />
+  <menu name="separator-line" />
+  <menu name="Reload waybar" command="(killall waybar; waybar) &amp;" />
+</menu>

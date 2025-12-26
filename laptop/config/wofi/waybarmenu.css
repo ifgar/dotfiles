@@ -1,0 +1,53 @@
+@define-color	azure #7dcfff;
+@define-color	text #c0caf5;
+@define-color	base  #1f2335;
+@define-color	red  #c53b53;
+
+* {
+  font-family: JetBrains Mono, "CaskaydiaCove Nerd Font";
+  font-size: 14px;
+}
+
+/* Window */
+window {
+  margin: 0px;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: @base;
+}
+
+/* Input (prompt) */
+#input {
+  margin: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  color: @text;
+  background-color: @base;
+}
+
+#input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Entries */
+#entry {
+  background-color: @base;
+}
+
+#entry:selected {
+  border-radius: 4px;
+  background-color: @azure;
+}
+
+#entry:selected #text {
+  color: @base;
+}
+
+#text {
+  margin: 2px;
+  color: @text;
+}
